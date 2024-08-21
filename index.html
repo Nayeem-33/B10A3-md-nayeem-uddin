@@ -1,11 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rinterio</title>
-</head>
-<body>
+
+    <!-- DaisyUI CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- font-awesome CDN -->
+    <script
+      src="https://kit.fontawesome.com/12c401b8a1.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Tailwind Custom CSS -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "primary-color": "#B68C5A",
+            },
+          },
+        },
+      };
+    </script>
+    <!-- Vanilla CSS -->
+    <style>
+      .manrope {
+        font-family: "Manrope", sans-serif;
+      }
+      /* .placeholder::placeholder {
+        color: #707070;
+        font-size: 20px;
+      } */
+      .bored {
+        border: 2 px solid red;
+      }
+      .boreen {
+        border: 2 px solid green;
+      }
+    </style>
+  </head>
+  <body>
     Hello World!
-</body>
+  </body>
 </html>
