@@ -35,8 +35,11 @@
           extend: {
             colors: {
               "pri-color": "#ABEF5F",
+              "sec-color": "#1C1C1C",
               "head-color": "#212121",
               "pera-color": "#494949",
+              "pera-foot-color": "#737373",
+              "link-foot-color": "#E9E9E9",
               "btn-green": "rgba(171, 239, 95, 0.2)",
             },
           },
@@ -65,77 +68,114 @@
     <header></header>
 
     <main></main>
-    <!-- Footer-1 -->
-    <div
-      class="bg-center bg-cover bg-no-repeat py-4 md:py-8 xl:py-24"
-      style="background-image: url(./assets/footer-bg.jpg)"
-    >
-      <div class="container mx-auto px-5">
-        <!-- Discuss Header -->
-        <div class="flex flex-col items-center">
-          <button
-            class="bg-btn-green px-4 py-2 rounded-3xl text-pera-color font-semibold"
-          >
-            <i class="fa-solid fa-arrow-right"></i> Let’s Connect
-          </button>
-          <h2 class="text-4xl font-black text-head-color text-center mt-4">
-            Let’s Discuss Next Project
-          </h2>
-          <p class="md:w-[650px] text-pera-color text-center mt-6">
-            The barn house captivates with its blend of rustic charm and modern
-            sophistication, featuring weathered wood, sleek metal accents.
-          </p>
-        </div>
 
-        <!-- Discuss Input -->
-        <div class="mt-8 flex flex-col gap-6">
-          <div class="flex gap-6">
-            <input
-              type="text"
-              placeholder="First Name*"
-              class="input w-full h-16 rounded-[64px] p-5"
-            />
-            <input
-              type="text"
-              placeholder="Last Name*"
-              class="input w-full h-16 rounded-[64px] p-5"
-            />
-          </div>
-
-          <div class="flex gap-6">
-            <input
-              type="number"
-              placeholder="Phone Number*"
-              class="input w-full h-16 rounded-[64px] p-5"
-            />
-            <input
-              type="email"
-              placeholder="Email Address*"
-              class="input w-full h-16 rounded-[64px] p-5"
-            />
-          </div>
-
-          <div>
-            <textarea
-              class="textarea w-full rounded-[32px] h-24 md:h-40 xl:h-60 p-5"
-              placeholder="Write your message here"
-            ></textarea>
-          </div>
-
-          <div>
+    <footer>
+      <!-- Footer-1 -->
+      <div
+        class="bg-center bg-cover bg-no-repeat py-12 md:py-20 xl:py-28"
+        style="background-image: url(./assets/footer-bg.jpg)"
+      >
+        <div class="container mx-auto px-5">
+          <!-- Discuss Header -->
+          <div class="flex flex-col items-center">
             <button
-              class="mt-2 justify-center py-3 w-full rounded-[32px] bg-pri-color flex content-center items-center gap-2"
+              class="bg-btn-green px-4 py-2 rounded-3xl text-pera-color font-semibold"
             >
-              <span class="font-extrabold text-2xl">Send Mail</span>
-              <i
-                class="-rotate-45 w-9 h-9 rounded-[100%] bg-head-color fa-solid fa-arrow-right text-white flex justify-center items-center"
-              ></i>
+              <i class="fa-solid fa-arrow-right"></i> Let’s Connect
             </button>
+            <h2 class="text-4xl font-black text-head-color text-center mt-4">
+              Let’s Discuss Next Project
+            </h2>
+            <p class="md:w-[650px] text-pera-color text-center mt-6">
+              The barn house captivates with its blend of rustic charm and
+              modern sophistication, featuring weathered wood, sleek metal
+              accents.
+            </p>
+          </div>
+
+          <!-- Discuss Input -->
+          <div class="mt-8 flex flex-col gap-6">
+            <div class="flex gap-6">
+              <input
+                type="text"
+                placeholder="First Name*"
+                class="input w-full h-16 rounded-[64px] p-5"
+              />
+              <input
+                type="text"
+                placeholder="Last Name*"
+                class="input w-full h-16 rounded-[64px] p-5"
+              />
+            </div>
+
+            <div class="flex gap-6">
+              <input
+                type="number"
+                placeholder="Phone Number*"
+                class="input w-full h-16 rounded-[64px] p-5"
+              />
+              <input
+                type="email"
+                placeholder="Email Address*"
+                class="input w-full h-16 rounded-[64px] p-5"
+              />
+            </div>
+
+            <div>
+              <textarea
+                class="textarea w-full rounded-[32px] h-40 xl:h-60 p-5"
+                placeholder="Write your message here"
+              ></textarea>
+            </div>
+
+            <div>
+              <button
+                class="mt-2 justify-center py-3 w-full rounded-[32px] bg-pri-color flex content-center items-center gap-2"
+              >
+                <span class="font-extrabold text-2xl">Send Mail</span>
+                <i
+                  class="-rotate-45 w-9 h-9 rounded-[100%] bg-head-color fa-solid fa-arrow-right text-white flex justify-center items-center"
+                ></i>
+              </button>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <!-- Footer-1 -->
-    <footer></footer>
+
+      <!-- Footer-2 -->
+      <div class="bg-sec-color py-12 md:py-20 xl:py-28">
+        <div class="container mx-auto px-5 flex flex-col items-center">
+          <div class="flex gap-2">
+            <i
+              class="-rotate-45 w-9 h-9 rounded-[100%] bg-pri-color font-bold fa-solid fa-arrow-right text-sec-color flex justify-center items-center"
+            ></i>
+            <span class="font-bold text-white text-4xl">Rinterio</span>
+          </div>
+          <p class="md:w-[650px] text-pera-foot-color text-center mt-4">
+            The barn house captivates with its blend of rustic charm and modern
+            sophistication, featuring weathered wood, sleek metal accents.
+          </p>
+          <nav class="mt-12">
+            <ul
+              class="flex flex-col md:flex-row text-link-foot-color font-medium gap-4 md:gap-24 text-center"
+            >
+              <li><a href=""></a>Home</li>
+              <li><a href=""></a>Service</li>
+              <li><a href=""></a>Portfolio</li>
+              <li><a href=""></a>Blogs</li>
+              <li><a href=""></a>Contact Us</li>
+            </ul>
+          </nav>
+          <button
+            class="mt-12 justify-center py-3 px-5 rounded-[32px] bg-pri-color flex content-center items-center gap-2"
+          >
+            <span class="font-extrabold text-2xl">Book Consult</span>
+            <i
+              class="-rotate-45 w-9 h-9 rounded-[100%] bg-head-color fa-solid fa-arrow-right text-white flex justify-center items-center"
+            ></i>
+          </button>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
