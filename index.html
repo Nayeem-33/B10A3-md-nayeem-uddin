@@ -56,6 +56,10 @@
         color: #707070;
         font-size: 20px;
       } */
+      .nav-menu-hover:hover {
+        background-color: transparent;
+        font-weight: 800;
+      }
       .bored {
         border: 2px solid red;
       }
@@ -64,8 +68,150 @@
       }
     </style>
   </head>
-  <body class="manrope">
-    <header></header>
+
+  <body class="manrope bg-[#F4F4F4]">
+    <header
+      style="background: linear-gradient(to bottom, transparent, white)"
+      class="overflow-hidden"
+    >
+      <!-- NAV START -->
+      <nav>
+        <div class="navbar py-5">
+          <!-- NAV START LOGO NAV -->
+          <div class="navbar-start">
+            <a class="text-xl"
+              ><div class="flex gap-2">
+                <i
+                  class="-rotate-45 w-9 h-9 rounded-[100%] bg-pri-color font-bold fa-solid fa-arrow-right text-sec-color flex justify-center items-center"
+                ></i>
+                <span class="font-extrabold text-[head-color] text-4xl"
+                  >Rinterio</span
+                >
+              </div></a
+            >
+          </div>
+
+          <!-- NAV MENU - NAV CENTER -->
+          <div class="navbar-center hidden xl:flex">
+            <ul class="menu menu-horizontal px-1">
+              <li class="nav-menu-hover"><a>Home</a></li>
+              <li class="nav-menu-hover"><a>Service</a></li>
+              <li class="nav-menu-hover"><a>Portfolio</a></li>
+              <li class="nav-menu-hover"><a>Blogs</a></li>
+              <li class="nav-menu-hover"><a>Contact Us</a></li>
+            </ul>
+          </div>
+
+          <!-- NAV END -->
+          <div class="navbar-end gap-3">
+            <div class="hidden xl:flex gap-3">
+              <!-- Search Icon -->
+              <button class="btn bg-[white] btn-circle">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                  />
+                </svg>
+              </button>
+
+              <!-- Cart Icon -->
+              <div class="dropdown dropdown-end">
+                <div
+                  tabindex="0"
+                  role="button"
+                  class="btn bg-[white] btn-circle"
+                >
+                  <div class="indicator">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-5 w-5"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+                      />
+                    </svg>
+                    <span class="badge badge-sm indicator-item">8</span>
+                  </div>
+                </div>
+                <div
+                  tabindex="0"
+                  class="card card-compact dropdown-content bg-base-100 z-[1] mt-3 w-52 shadow"
+                >
+                  <div class="card-body">
+                    <span class="text-lg font-bold">8 Items</span>
+                    <span class="text-info">Subtotal: $999</span>
+                    <div class="card-actions">
+                      <button class="btn btn-primary btn-block">
+                        View cart
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Book Button -->
+            <button
+              class="justify-center py-3 px-5 rounded-[32px] bg-pri-color flex content-center items-center gap-2"
+            >
+              <span class="font-extrabold text-2xl">Book Consult</span>
+              <i
+                class="-rotate-45 w-9 h-9 rounded-[100%] bg-head-color fa-solid fa-arrow-right text-white flex justify-center items-center"
+              ></i>
+            </button>
+
+            <!-- Hamburger Icon -->
+            <div class="dropdown">
+              <div
+                tabindex="0"
+                role="button"
+                class="btn bg-[white] btn-circle xl:hidden"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h8m-8 6h16"
+                  />
+                </svg>
+              </div>
+              <ul
+                tabindex="0"
+                class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+              >
+                <li><a>Home</a></li>
+                <li><a>Service</a></li>
+                <li><a>Portfolio</a></li>
+                <li><a>Blogs</a></li>
+                <li><a>Contact Us</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
 
     <main></main>
 
@@ -95,7 +241,7 @@
 
           <!-- Discuss Input -->
           <div class="mt-8 flex flex-col gap-6">
-            <div class="flex gap-6">
+            <div class="flex flex-col md:flex-row gap-6">
               <input
                 type="text"
                 placeholder="First Name*"
@@ -108,7 +254,7 @@
               />
             </div>
 
-            <div class="flex gap-6">
+            <div class="flex flex-col md:flex-row gap-6">
               <input
                 type="number"
                 placeholder="Phone Number*"
@@ -149,7 +295,7 @@
             <i
               class="-rotate-45 w-9 h-9 rounded-[100%] bg-pri-color font-bold fa-solid fa-arrow-right text-sec-color flex justify-center items-center"
             ></i>
-            <span class="font-bold text-white text-4xl">Rinterio</span>
+            <span class="font-extrabold text-white text-4xl">Rinterio</span>
           </div>
           <p class="md:w-[650px] text-pera-foot-color text-center mt-4">
             The barn house captivates with its blend of rustic charm and modern
