@@ -41,6 +41,7 @@
               "pera-foot-color": "#737373",
               "link-foot-color": "#E9E9E9",
               "btn-green": "rgba(171, 239, 95, 0.2)",
+              "btn-green-2": "rgba(171, 239, 95, 0.5)",
             },
           },
         },
@@ -52,6 +53,7 @@
       .manrope {
         font-family: "Manrope", sans-serif;
       }
+
       /* .placeholder::placeholder {
         color: #707070;
         font-size: 20px;
@@ -60,9 +62,11 @@
         background-color: transparent;
         font-weight: 800;
       }
+
       .bored {
         border: 2px solid red;
       }
+
       .boreen {
         border: 2px solid green;
       }
@@ -75,20 +79,20 @@
       class="overflow-hidden"
     >
       <!-- NAV START -->
-      <nav>
+      <nav class="container mx-auto">
         <div class="navbar py-5">
           <!-- NAV START LOGO NAV -->
           <div class="navbar-start">
-            <a class="text-xl"
-              ><div class="flex gap-2">
+            <a class="text-xl">
+              <div class="flex gap-2">
                 <i
                   class="-rotate-45 w-9 h-9 rounded-[100%] bg-pri-color font-bold fa-solid fa-arrow-right text-sec-color flex justify-center items-center"
                 ></i>
                 <span class="font-extrabold text-[head-color] text-4xl"
                   >Rinterio</span
                 >
-              </div></a
-            >
+              </div>
+            </a>
           </div>
 
           <!-- NAV MENU - NAV CENTER -->
@@ -197,17 +201,116 @@
           </div>
         </div>
       </nav>
+
+      <div class="container mx-auto px-5 py-12 md:py-20 xl:py-28">
+        <!-- Hero Header -->
+        <div class="flex flex-col items-center">
+          <img src="./assets/hero.png" alt="" />
+          <h2
+            class="xl:w-[1100px] text-7xl font-black text-head-color text-center mt-6"
+            style="-webkit-text-stroke: 2px #212121"
+          >
+            A barn house of this design has a striking appearance
+          </h2>
+          <p class="lg:w-[970px] text-pera-color text-center mt-6">
+            The barn house captivates with its blend of rustic charm and modern
+            sophistication, featuring weathered wood, sleek metal accents, and
+            large windows that flood the space with natural light.
+          </p>
+          <button
+            class="justify-center py-3 px-5 rounded-[32px] bg-btn-green-2 flex content-center items-center gap-2 mt-8"
+          >
+            <span class="font-extrabold text-2xl">View Details</span>
+            <i
+              class="-rotate-45 w-9 h-9 rounded-[100%] bg-pri-color fa-solid fa-arrow-right text-sec-color flex justify-center items-center"
+            ></i>
+          </button>
+        </div>
+      </div>
     </header>
 
-    <main></main>
+    <main>
+      <!-- About Us -->
+      <div
+        class="container mx-auto px-5 py-12 md:py-20 xl:py-28 flex flex-col lg:flex-row gap-6 h-full"
+      >
+        <!-- About Us DIV-1 -->
+        <div class="relative w-full lg:w-[55%]">
+          <img
+            class="absolute -left-6 hidden lg:block"
+            src="./assets/icon-spring.png"
+            alt=""
+          />
+          <!-- Button About Us -->
+          <button
+            class="lg:mt-14 justify-center py-2 px-4 rounded-[32px] bg-white text-xl font-bold text-pera-color flex content-center items-center gap-2"
+          >
+            <i class="fa-solid fa-arrow-right"></i>About Us
+          </button>
+          <h2
+            class="text-4xl font-black text-center lg:text-left text-head-color mt-4 w-full lg:w-[450px]"
+            style="-webkit-text-stroke: 1px #212121"
+          >
+            We design thoughtful, liveable spaces
+          </h2>
+          <p class="text-pera-color mt-6 text-center lg:text-left">
+            The barn house captivates with its blend of rustic charm and modern
+            sophistication, featuring weathered wood, sleek metal accents.
+          </p>
+
+          <!-- Commercial Residential Card -->
+          <div class="flex flex-col md:flex-row lg:flex-col gap-6 mt-6">
+            <!-- Card Commercial -->
+            <div class="bg-white rounded-2xl p-6 flex gap-6">
+              <div>
+                <img src="./assets/icon-commercial.png" alt="" />
+              </div>
+              <div>
+                <h3 class="font-extrabold text-2xl">Commercial</h3>
+                <p class="w-full lg:w-[320px] mt-3 text-pera-color">
+                  The barn house captivates with its blend of rustic charm and
+                  modern.
+                </p>
+              </div>
+            </div>
+
+            <!-- Card Residential -->
+            <div class="bg-white rounded-2xl p-6 flex gap-6">
+              <div>
+                <img src="./assets/icon-residential.png" alt="" />
+              </div>
+              <div>
+                <h3 class="font-extrabold text-2xl">Residential</h3>
+                <p class="w-full lg:w-[320px] mt-3 text-pera-color">
+                  The barn house captivates with its blend of rustic charm and
+                  modern.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- About Us DIV-2 Mobile -->
+        <div
+          class="lg:hidden w-full h-[450px] lg:w-[45%] bg-no-repeat bg-center bg-cover rounded-2xl"
+          style="background-image: url('./assets/liveable-spaces.png')"
+        ></div>
+
+        <!-- About Us DIV-2 PC -->
+        <div
+          class="hidden lg:block w-full lg:w-[45%] lg:min-h-[450px] bg-no-repeat bg-center bg-cover rounded-2xl"
+          style="background-image: url('./assets/liveable-spaces.png')"
+        ></div>
+      </div>
+    </main>
 
     <footer>
       <!-- Footer-1 -->
       <div
-        class="bg-center bg-cover bg-no-repeat py-12 md:py-20 xl:py-28"
+        class="bg-center bg-cover bg-no-repeat px-5 py-12 md:py-20 xl:py-28"
         style="background-image: url(./assets/footer-bg.jpg)"
       >
-        <div class="container mx-auto px-5">
+        <div class="container mx-auto">
           <!-- Discuss Header -->
           <div class="flex flex-col items-center">
             <button
@@ -215,7 +318,10 @@
             >
               <i class="fa-solid fa-arrow-right"></i> Let’s Connect
             </button>
-            <h2 class="text-4xl font-black text-head-color text-center mt-4">
+            <h2
+              class="text-4xl font-black text-head-color mt-4"
+              style="-webkit-text-stroke: 1px #212121"
+            >
               Let’s Discuss Next Project
             </h2>
             <p class="md:w-[650px] text-pera-color text-center mt-6">
@@ -275,8 +381,8 @@
       </div>
 
       <!-- Footer-2 -->
-      <div class="bg-sec-color py-12 md:py-20 xl:py-28">
-        <div class="container mx-auto px-5 flex flex-col items-center">
+      <div class="bg-sec-color px-5 py-12 md:py-20 xl:py-28">
+        <div class="container mx-auto flex flex-col items-center">
           <div class="flex gap-2">
             <i
               class="-rotate-45 w-9 h-9 rounded-[100%] bg-pri-color font-bold fa-solid fa-arrow-right text-sec-color flex justify-center items-center"
