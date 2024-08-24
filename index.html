@@ -1,832 +1,854 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rinterio</title>
 
-    <!-- DaisyUI CDN -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rinterio</title>
 
-    <!-- Google Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
-      rel="stylesheet"
-    />
+  <!-- DaisyUI CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
 
-    <!-- font-awesome CDN -->
-    <script
-      src="https://kit.fontawesome.com/12c401b8a1.js"
-      crossorigin="anonymous"
-    ></script>
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet" />
 
-    <!-- Tailwind Custom CSS -->
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              "pri-color": "#ABEF5F",
-              "sec-color": "#1C1C1C",
-              "head-color": "#212121",
-              "pera-color": "#494949",
-              "pera-foot-color": "#737373",
-              "link-foot-color": "#E9E9E9",
-              "btn-green": "rgba(171, 239, 95, 0.2)",
-              "btn-green-2": "rgba(171, 239, 95, 0.5)",
-            },
+  <!-- font-awesome CDN -->
+  <script src="https://kit.fontawesome.com/12c401b8a1.js" crossorigin="anonymous"></script>
+
+  <!-- Tailwind Custom CSS -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            "pri-color": "#ABEF5F",
+            "sec-color": "#1C1C1C",
+            "head-color": "#212121",
+            "pera-color": "#494949",
+            "pera-foot-color": "#737373",
+            "link-foot-color": "#E9E9E9",
+            "btn-green": "rgba(171, 239, 95, 0.2)",
+            "btn-green-2": "rgba(171, 239, 95, 0.5)",
           },
         },
-      };
-    </script>
+      },
+    };
+  </script>
 
-    <!-- Vanilla CSS -->
-    <style>
-      .manrope {
-        font-family: "Manrope", sans-serif;
-      }
+  <!-- Vanilla CSS -->
+  <style>
+    .manrope {
+      font-family: "Manrope", sans-serif;
+    }
 
-      /* .placeholder::placeholder {
+    /* .placeholder::placeholder {
         color: #707070;
         font-size: 20px;
       } */
-      .nav-menu-hover:hover {
-        background-color: transparent;
-        font-weight: 800;
-      }
+    .nav-menu-hover:hover {
+      background-color: transparent;
+      font-weight: 800;
+    }
 
-      .bored {
-        border: 2px solid red;
-      }
+    .bored {
+      border: 2px solid red;
+    }
 
-      .boreen {
-        border: 2px solid green;
-      }
-    </style>
-  </head>
+    .boreen {
+      border: 2px solid green;
+    }
+  </style>
+</head>
 
-  <body class="manrope bg-[#F4F4F4]">
-    <header
-      style="background: linear-gradient(to bottom, transparent, white)"
-      class="overflow-hidden"
-    >
-      <!-- Navbar -->
-      <nav class="container mx-auto">
-        <div class="navbar py-5">
-          <!-- Navbar Start Logo -->
-          <div class="navbar-start">
-            <a class="text-xl">
-              <div class="flex gap-2">
-                <i
-                  class="-rotate-45 w-9 h-9 rounded-[100%] bg-pri-color font-bold fa-solid fa-arrow-right text-sec-color flex justify-center items-center"
-                ></i>
-                <span class="font-extrabold text-[head-color] text-4xl"
-                  >Rinterio</span
-                >
-              </div>
-            </a>
-          </div>
+<body class="manrope bg-[#F4F4F4]">
+  <header style="background: linear-gradient(to bottom, transparent, white)" class="overflow-hidden">
+    <!-- Navbar -->
+    <nav class="container mx-auto">
+      <div class="navbar py-5">
+        <!-- Navbar Start Logo -->
+        <div class="navbar-start">
+          <a class="text-xl">
+            <div class="flex gap-2">
+              <i
+                class="-rotate-45 w-9 h-9 rounded-[100%] bg-pri-color font-bold fa-solid fa-arrow-right text-sec-color flex justify-center items-center"></i>
+              <span class="font-extrabold text-[head-color] text-4xl">Rinterio</span>
+            </div>
+          </a>
+        </div>
 
-          <!-- Navbar Center Menu -->
-          <div class="navbar-center hidden xl:flex">
-            <ul class="menu menu-horizontal px-1">
-              <li class="nav-menu-hover"><a>Home</a></li>
-              <li class="nav-menu-hover"><a>Service</a></li>
-              <li class="nav-menu-hover"><a>Portfolio</a></li>
-              <li class="nav-menu-hover"><a>Blogs</a></li>
-              <li class="nav-menu-hover"><a>Contact Us</a></li>
-            </ul>
-          </div>
+        <!-- Navbar Center Menu -->
+        <div class="navbar-center hidden xl:flex">
+          <ul class="menu menu-horizontal px-1">
+            <li class="nav-menu-hover"><a>Home</a></li>
+            <li class="nav-menu-hover"><a>Service</a></li>
+            <li class="nav-menu-hover"><a>Portfolio</a></li>
+            <li class="nav-menu-hover"><a>Blogs</a></li>
+            <li class="nav-menu-hover"><a>Contact Us</a></li>
+          </ul>
+        </div>
 
-          <!-- Navbar End buttons, Mobile Hidden Menu -->
-          <div class="navbar-end gap-3">
-            <div class="hidden xl:flex gap-3">
-              <!-- Search Icon -->
-              <button class="btn bg-[white] btn-circle">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="h-5 w-5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                  />
-                </svg>
-              </button>
+        <!-- Navbar End buttons, Mobile Hidden Menu -->
+        <div class="navbar-end gap-3">
+          <div class="hidden xl:flex gap-3">
+            <!-- Search Icon -->
+            <button class="btn bg-[white] btn-circle">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+              </svg>
+            </button>
 
-              <!-- Cart Icon -->
-              <div class="dropdown dropdown-end">
-                <div
-                  tabindex="0"
-                  role="button"
-                  class="btn btn-ghost btn-circle bg-[white]"
-                >
-                  <div class="indicator">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="h-5 w-5"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
-                      />
-                    </svg>
-                    <span class="badge badge-sm indicator-item">10</span>
-                  </div>
+            <!-- Cart Icon -->
+            <div class="dropdown dropdown-end">
+              <div tabindex="0" role="button" class="btn btn-ghost btn-circle bg-[white]">
+                <div class="indicator">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                  </svg>
+                  <span class="badge badge-sm indicator-item">10</span>
                 </div>
               </div>
             </div>
-
-            <!-- Book Button -->
-            <button
-              class="justify-center py-3 px-5 rounded-[32px] bg-pri-color flex content-center items-center gap-2"
-            >
-              <span class="font-extrabold text-2xl">Book Consult</span>
-              <i
-                class="-rotate-45 w-9 h-9 rounded-[100%] bg-head-color fa-solid fa-arrow-right text-white flex justify-center items-center"
-              ></i>
-            </button>
-
-            <!-- Mobile Hidden Menu -->
-            <div class="dropdown">
-              <div
-                tabindex="0"
-                role="button"
-                class="btn bg-[white] btn-circle xl:hidden"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="h-5 w-5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M4 6h16M4 12h8m-8 6h16"
-                  />
-                </svg>
-              </div>
-              <ul
-                tabindex="0"
-                class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
-              >
-                <li><a>Home</a></li>
-                <li><a>Service</a></li>
-                <li><a>Portfolio</a></li>
-                <li><a>Blogs</a></li>
-                <li><a>Contact Us</a></li>
-              </ul>
-            </div>
           </div>
-        </div>
-      </nav>
 
-      <!-- Hero -->
-      <div class="container mx-auto px-5 py-12 md:py-20 xl:py-28">
-        <div class="flex flex-col items-center">
-          <img src="./assets/hero.png" alt="" />
-          <h2
-            class="xl:w-[1100px] text-7xl font-black text-head-color text-center mt-6"
-            style="-webkit-text-stroke: 2px #212121"
-          >
-            A barn house of this design has a striking appearance
-          </h2>
-          <p class="lg:w-[970px] text-pera-color text-center mt-6">
-            The barn house captivates with its unique fusion of rustic charm and
-            modern elegance, combining weathered wood, sleek metal finishes, and
-            expansive windows that invite an abundance of natural light.
-          </p>
-          <button
-            class="py-3 px-5 rounded-[32px] bg-btn-green-2 flex items-center gap-2 mt-8"
-          >
-            <span class="font-extrabold text-xl">View Details</span>
+          <!-- Book Button -->
+          <button class="justify-center py-3 px-5 rounded-[32px] bg-pri-color flex content-center items-center gap-2">
+            <span class="font-extrabold text-2xl">Book Consult</span>
             <i
-              class="fa-solid fa-arrow-right -rotate-45 w-9 h-9 rounded-[100%] bg-pri-color text-sec-color flex justify-center items-center text-xl"
-            ></i>
+              class="-rotate-45 w-9 h-9 rounded-[100%] bg-head-color fa-solid fa-arrow-right text-white flex justify-center items-center"></i>
           </button>
+
+          <!-- Mobile Hidden Menu -->
+          <div class="dropdown">
+            <div tabindex="0" role="button" class="btn bg-[white] btn-circle xl:hidden">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+              </svg>
+            </div>
+            <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+              <li><a>Home</a></li>
+              <li><a>Service</a></li>
+              <li><a>Portfolio</a></li>
+              <li><a>Blogs</a></li>
+              <li><a>Contact Us</a></li>
+            </ul>
+          </div>
         </div>
       </div>
-    </header>
+    </nav>
 
-    <main>
-      <!-- About Us -->
-      <div
-        class="container mx-auto px-5 py-12 md:py-20 xl:py-28 flex flex-col lg:flex-row gap-6 h-full"
-      >
-        <!-- About Us DIV-1 -->
-        <div class="relative w-full lg:w-[55%]">
-          <img
-            class="absolute -left-6 hidden lg:block"
-            src="./assets/icon-spring.png"
-            alt=""
-          />
-          <!-- Button About Us -->
-          <button
-            class="lg:mt-14 justify-center py-2 px-4 rounded-[32px] bg-white text-xl font-bold text-pera-color flex content-center items-center gap-2"
-          >
-            <i class="fa-solid fa-arrow-right"></i>About Us
-          </button>
-          <h2
-            class="text-4xl font-black text-center lg:text-left text-head-color mt-4 w-full lg:w-[450px]"
-            style="-webkit-text-stroke: 1px #212121"
-          >
-            We design thoughtful, liveable spaces
-          </h2>
-          <p class="text-pera-color mt-6 text-center lg:text-left">
-            We design spaces that are both functional and inviting, where every
-            detail is crafted to enhance comfort and beauty..
-          </p>
+    <!-- Hero -->
+    <div class="container mx-auto px-5 py-12 md:py-20 xl:py-28">
+      <div class="flex flex-col items-center">
+        <img src="./assets/hero.png" alt="" />
+        <h2 class="xl:w-[1100px] text-7xl font-black text-head-color text-center mt-6"
+          style="-webkit-text-stroke: 2px #212121">
+          A barn house of this design has a striking appearance
+        </h2>
+        <p class="lg:w-[970px] text-pera-color text-center mt-6">
+          The barn house captivates with its unique fusion of rustic charm and
+          modern elegance, combining weathered wood, sleek metal finishes, and
+          expansive windows that invite an abundance of natural light.
+        </p>
+        <button class="py-3 px-5 rounded-[32px] bg-btn-green-2 flex items-center gap-2 mt-8">
+          <span class="font-extrabold text-xl">View Details</span>
+          <i
+            class="fa-solid fa-arrow-right -rotate-45 w-9 h-9 rounded-[100%] bg-pri-color text-sec-color flex justify-center items-center text-xl"></i>
+        </button>
+      </div>
+    </div>
+  </header>
 
-          <!-- Commercial Residential Card -->
-          <div class="flex flex-col md:flex-row lg:flex-col gap-6 mt-6">
-            <!-- Card Commercial -->
-            <div class="bg-white rounded-2xl p-6 flex gap-6">
-              <div>
-                <img src="./assets/icon-commercial.png" alt="" />
-              </div>
-              <div>
-                <h3 class="font-extrabold text-2xl">Commercial</h3>
-                <p class="w-full lg:w-[320px] mt-3 text-pera-color">
-                  We design functional, stylish commercial spaces that elevate
-                  your brand.
-                </p>
-              </div>
+  <main>
+    <!-- About Us -->
+    <div class="container mx-auto px-5 py-12 md:py-20 xl:py-28 flex flex-col lg:flex-row gap-6 h-full">
+      <!-- About Us DIV-1 -->
+      <div class="relative w-full lg:w-[55%]">
+        <img class="absolute -left-6 hidden lg:block" src="./assets/icon-spring.png" alt="" />
+        <!-- Button About Us -->
+        <button
+          class="lg:mt-14 justify-center py-2 px-4 rounded-[32px] bg-white text-xl font-bold text-pera-color flex content-center items-center gap-2">
+          <i class="fa-solid fa-arrow-right"></i>About Us
+        </button>
+        <h2 class="text-4xl font-black text-center lg:text-left text-head-color mt-4 w-full lg:w-[450px]"
+          style="-webkit-text-stroke: 1px #212121">
+          We design thoughtful, liveable spaces
+        </h2>
+        <p class="text-pera-color mt-6 text-center lg:text-left">
+          We design spaces that are both functional and inviting, where every
+          detail is crafted to enhance comfort and beauty..
+        </p>
+
+        <!-- Commercial Residential Card -->
+        <div class="flex flex-col md:flex-row lg:flex-col gap-6 mt-6">
+          <!-- Card Commercial -->
+          <div class="bg-white rounded-2xl p-6 flex gap-6">
+            <div>
+              <img src="./assets/icon-commercial.png" alt="" />
             </div>
+            <div>
+              <h3 class="font-extrabold text-2xl">Commercial</h3>
+              <p class="w-full lg:w-[320px] mt-3 text-pera-color">
+                We design functional, stylish commercial spaces that elevate
+                your brand.
+              </p>
+            </div>
+          </div>
 
-            <!-- Card Residential -->
-            <div class="bg-white rounded-2xl p-6 flex gap-6">
-              <div>
-                <img src="./assets/icon-residential.png" alt="" />
-              </div>
-              <div>
-                <h3 class="font-extrabold text-2xl">Residential</h3>
-                <p class="w-full lg:w-[320px] mt-3 text-pera-color">
-                  We create comfortable, elegant residential spaces which suit
-                  your lifestyle.
-                </p>
-              </div>
+          <!-- Card Residential -->
+          <div class="bg-white rounded-2xl p-6 flex gap-6">
+            <div>
+              <img src="./assets/icon-residential.png" alt="" />
+            </div>
+            <div>
+              <h3 class="font-extrabold text-2xl">Residential</h3>
+              <p class="w-full lg:w-[320px] mt-3 text-pera-color">
+                We create comfortable, elegant residential spaces which suit
+                your lifestyle.
+              </p>
             </div>
           </div>
         </div>
-
-        <!-- About Us DIV-2 Mobile -->
-        <div
-          class="lg:hidden w-full h-[450px] lg:w-[45%] bg-no-repeat bg-center bg-cover rounded-2xl"
-          style="background-image: url('./assets/liveable-spaces.png')"
-        ></div>
-
-        <!-- About Us DIV-2 PC -->
-        <div
-          class="hidden lg:block w-full lg:w-[45%] lg:min-h-[450px] bg-no-repeat bg-center bg-cover rounded-2xl"
-          style="background-image: url('./assets/liveable-spaces.png')"
-        ></div>
       </div>
 
-      <!-- Achievements -->
-      <div
-        class="container mx-auto bg-white rounded-2xl p-8 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6"
-      >
+      <!-- About Us DIV-2 Mobile -->
+      <div class="lg:hidden w-full h-[450px] lg:w-[45%] bg-no-repeat bg-center bg-cover rounded-2xl"
+        style="background-image: url('./assets/liveable-spaces.png')"></div>
+
+      <!-- About Us DIV-2 PC -->
+      <div class="hidden lg:block w-full lg:w-[45%] lg:min-h-[450px] bg-no-repeat bg-center bg-cover rounded-2xl"
+        style="background-image: url('./assets/liveable-spaces.png')"></div>
+    </div>
+
+    <!-- Achievements -->
+    <div class="container mx-auto bg-white rounded-2xl p-8 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
+      <!-- Card-1 -->
+      <div class="p-6 text-pera-color text-center">
+        <i class="fa-regular fa-comment-dots text-4xl"></i>
+        <h1 class="text-5xl font-extrabold mt-3">235+</h1>
+        <p class="mt-3">Happy Client Review</p>
+      </div>
+
+      <!-- Card-2 -->
+      <div class="p-6 text-pera-color text-center">
+        <i class="fa-regular fa-building text-4xl"></i>
+        <h1 class="text-5xl font-extrabold mt-3">50+</h1>
+        <p class="mt-3">Work Departments</p>
+      </div>
+
+      <!-- Card-3 -->
+      <div class="p-6 text-pera-color text-center">
+        <i class="fa-regular fa-face-smile-beam text-4xl"></i>
+        <h1 class="text-5xl font-extrabold mt-3">30K+</h1>
+        <p class="mt-3">Our Happy Client</p>
+      </div>
+
+      <!-- Card-4 -->
+      <div class="p-6 text-pera-color text-center">
+        <i class="fa-regular fa-user text-4xl"></i>
+        <h1 class="text-5xl font-extrabold mt-3">307+</h1>
+        <p class="mt-3">Staff Members</p>
+      </div>
+    </div>
+
+    <!-- Challenge Part : Before and After Carousel -->
+    <div class="container mx-auto px-5 py-12 md:py-20">
+      <!-- Before and After Header -->
+      <div class="flex flex-col items-center">
+        <button class="bg-btn-green px-4 py-2 rounded-3xl text-pera-color font-bold">
+          <i class="fa-solid fa-arrow-right mr-1"></i> View Our
+          Transformations
+        </button>
+
+        <h2 class="text-4xl font-black text-head-color mt-4 text-center" style="-webkit-text-stroke: 1px #212121">
+          Before & After: Our Work in Action
+        </h2>
+
+        <p class="md:w-[650px] text-pera-color text-center mt-6">
+          Look transformations we made for our clients. These before-after
+          photos shows our dedication to quality & attention to details. See
+          the difference we can make!
+        </p>
+      </div>
+
+      <!-- Nav Button -->
+      <div class="flex w-full justify-center gap-2 py-6">
+        <a href="#item1" class="btn bg-white px-6 py-2 rounded-3xl text-pera-color font-bold"><i
+            class="fa-solid fa-couch"></i> Living</a>
+        <a href="#item2" class="btn bg-white px-6 py-2 rounded-3xl text-pera-color font-bold"><i
+            class="fa-solid fa-chair"></i>Dining</a>
+        <a href="#item3" class="btn bg-white px-6 py-2 rounded-3xl text-pera-color font-bold"><i
+            class="fa-solid fa-bed"></i> Bedroom</a>
+      </div>
+
+      <!-- Carousel + Difference -->
+      <div class="carousel w-full rounded-2xl">
+        <!-- Dining Slider -->
+        <div id="item1" class="carousel-item w-full">
+          <div class="diff aspect-[16/9]">
+            <div class="diff-item-1">
+              <img alt="living after" src="./assets/living-after.jpg" />
+            </div>
+            <div class="diff-item-2">
+              <img alt="living before" src="./assets/living-before.jpg" />
+            </div>
+            <div class="diff-resizer"></div>
+          </div>
+        </div>
+
+        <!-- Dining Slider -->
+        <div id="item2" class="carousel-item w-full">
+          <div class="diff aspect-[16/9]">
+            <div class="diff-item-1">
+              <img alt="dining after" src="./assets/dining-after.jpg" />
+            </div>
+            <div class="diff-item-2">
+              <img alt="dining before" src="./assets/dining-before.jpg" />
+            </div>
+            <div class="diff-resizer"></div>
+          </div>
+        </div>
+
+        <!-- Bedroom Slider -->
+        <div id="item3" class="carousel-item w-full">
+          <div class="diff aspect-[16/9]">
+            <div class="diff-item-1">
+              <img alt="bedroom after" src="./assets/bedroom-after.jpg" />
+            </div>
+            <div class="diff-item-2">
+              <img alt="bedroom before" src="./assets/bedroom-before.jpg" />
+            </div>
+            <div class="diff-resizer"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Our Works Process -->
+    <div class="container mx-auto px-5 py-12 md:py-20">
+      <!-- Our Works Process Header -->
+      <div class="flex flex-col items-center">
+        <button class="bg-white px-4 py-2 rounded-3xl text-pera-color font-bold">
+          <i class="fa-solid fa-arrow-right mr-1"></i> How we work
+        </button>
+
+        <h2 class="text-4xl font-black text-head-color mt-4 text-center" style="-webkit-text-stroke: 1px #212121">
+          Our Works Process
+        </h2>
+
+        <p class="md:w-[650px] text-pera-color text-center mt-6">
+          We ensure our every project is seamlessly executed, from concept to
+          completion, with a focus on quality and attention to detail.
+        </p>
+      </div>
+
+      <!-- Our Works Process Cards -->
+      <div class="mt-8 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
         <!-- Card-1 -->
-        <div class="p-6 text-pera-color text-center">
-          <i class="fa-regular fa-comment-dots text-4xl"></i>
-          <h1 class="text-5xl font-extrabold mt-3">235+</h1>
-          <p class="mt-3">Happy Client Review</p>
+        <div class="bg-[#E7C1D3] rounded-2xl p-6">
+          <img src="./assets/icon-concept.png" alt="" />
+          <h3 class="font-extrabold text-xl mt-3">Concept</h3>
+          <p class="font-medium w-full mt-3 text-pera-color">
+            We understand your vision, and set foundation for a space that
+            aligns with your goals.
+          </p>
         </div>
 
         <!-- Card-2 -->
-        <div class="p-6 text-pera-color text-center">
-          <i class="fa-regular fa-building text-4xl"></i>
-          <h1 class="text-5xl font-extrabold mt-3">50+</h1>
-          <p class="mt-3">Work Departments</p>
+        <div class="bg-[#EFDA6E] rounded-2xl p-6">
+          <img src="./assets/icon-design-process.png" alt="" />
+          <h3 class="font-extrabold text-xl mt-3">Design Process</h3>
+          <p class="font-medium w-full mt-3 text-pera-color">
+            Our team crafts thoughtful designs that is creative and
+            functional, tailored to your needs.
+          </p>
         </div>
 
         <!-- Card-3 -->
-        <div class="p-6 text-pera-color text-center">
-          <i class="fa-regular fa-face-smile-beam text-4xl"></i>
-          <h1 class="text-5xl font-extrabold mt-3">30K+</h1>
-          <p class="mt-3">Our Happy Client</p>
+        <div class="bg-[#A4DAC3] rounded-2xl p-6">
+          <img src="./assets/icon-supervision.png" alt="" />
+          <h3 class="font-extrabold text-xl mt-3">Supervision</h3>
+          <p class="font-medium w-full mt-3 text-pera-color">
+            We supervise during construction, ensuring the project maintains
+            the design and quality.
+          </p>
         </div>
 
         <!-- Card-4 -->
-        <div class="p-6 text-pera-color text-center">
-          <i class="fa-regular fa-user text-4xl"></i>
-          <h1 class="text-5xl font-extrabold mt-3">307+</h1>
-          <p class="mt-3">Staff Members</p>
-        </div>
-      </div>
-
-      <!-- Challenge Part : Before and After Carousel -->
-      <div class="container mx-auto px-5 py-12 md:py-20">
-        <!-- Before and After Header -->
-        <div class="flex flex-col items-center">
-          <button
-            class="bg-btn-green px-4 py-2 rounded-3xl text-pera-color font-bold"
-          >
-            <i class="fa-solid fa-arrow-right mr-1"></i> View Our
-            Transformations
-          </button>
-
-          <h2
-            class="text-4xl font-black text-head-color mt-4 text-center"
-            style="-webkit-text-stroke: 1px #212121"
-          >
-            Before & After: Our Work in Action
-          </h2>
-
-          <p class="md:w-[650px] text-pera-color text-center mt-6">
-            Look transformations we made for our clients. These before-after
-            photos shows our dedication to quality & attention to details. See
-            the difference we can make!
+        <div class="bg-[#77AAEA] rounded-2xl p-6">
+          <img src="./assets/icon-budget-planning.png" alt="" />
+          <h3 class="font-extrabold text-xl mt-3">Budget Planning</h3>
+          <p class="font-medium w-full mt-3 text-pera-color">
+            We provide efficient budget management, ensuring your project
+            financially on track.
           </p>
         </div>
+      </div>
+    </div>
 
-        <!-- Nav Button -->
-        <div class="flex w-full justify-center gap-2 py-6">
-          <a
-            href="#item1"
-            class="btn bg-white px-6 py-2 rounded-3xl text-pera-color font-bold"
-            ><i class="fa-solid fa-couch"></i> Living</a
-          >
-          <a
-            href="#item2"
-            class="btn bg-white px-6 py-2 rounded-3xl text-pera-color font-bold"
-            ><i class="fa-solid fa-chair"></i>Dining</a
-          >
-          <a
-            href="#item3"
-            class="btn bg-white px-6 py-2 rounded-3xl text-pera-color font-bold"
-            ><i class="fa-solid fa-bed"></i> Bedroom</a
-          >
-        </div>
+    <!-- Our Latest Portfolio -->
+     <div class="bg-white">
+    <div class="container mx-auto px-5 py-12 md:py-20">
+      <!-- Our Latest Portfolio Header -->
+      <div class="flex flex-col items-center">
+        <button class="bg-btn-green px-4 py-2 rounded-3xl text-pera-color font-bold">
+          <i class="fa-solid fa-arrow-right mr-1"></i> Explore our Latest
+          works
+        </button>
 
-        <!-- Carousel + Difference -->
-        <div class="carousel w-full rounded-2xl">
-          <!-- Dining Slider -->
-          <div id="item1" class="carousel-item w-full">
-            <div class="diff aspect-[16/9]">
-              <div class="diff-item-1">
-                <img alt="living after" src="./assets/living-after.jpg" />
-              </div>
-              <div class="diff-item-2">
-                <img alt="living before" src="./assets/living-before.jpg" />
-              </div>
-              <div class="diff-resizer"></div>
-            </div>
-          </div>
+        <h2 class="text-4xl font-black text-head-color mt-4 text-center" style="-webkit-text-stroke: 1px #212121">
+          Our Latest Portfolio
+        </h2>
 
-          <!-- Dining Slider -->
-          <div id="item2" class="carousel-item w-full">
-            <div class="diff aspect-[16/9]">
-              <div class="diff-item-1">
-                <img alt="dining after" src="./assets/dining-after.jpg" />
-              </div>
-              <div class="diff-item-2">
-                <img alt="dining before" src="./assets/dining-before.jpg" />
-              </div>
-              <div class="diff-resizer"></div>
-            </div>
-          </div>
-
-          <!-- Bedroom Slider -->
-          <div id="item3" class="carousel-item w-full">
-            <div class="diff aspect-[16/9]">
-              <div class="diff-item-1">
-                <img alt="bedroom after" src="./assets/bedroom-after.jpg" />
-              </div>
-              <div class="diff-item-2">
-                <img alt="bedroom before" src="./assets/bedroom-before.jpg" />
-              </div>
-              <div class="diff-resizer"></div>
-            </div>
-          </div>
-        </div>
+        <p class="md:w-[650px] text-pera-color text-center mt-6">
+          Discover our most recent projects, Each portfolio piece reflects our
+          commitment to creating exceptional spaces tailored to our clients'
+          needs.
+        </p>
       </div>
 
-      <!-- Our Works Process -->
-      <div class="container mx-auto px-5 py-12 md:py-20">
-        <!-- Our Works Process Header -->
-        <div class="flex flex-col items-center">
-          <button
-            class="bg-white px-4 py-2 rounded-3xl text-pera-color font-bold"
-          >
-            <i class="fa-solid fa-arrow-right mr-1"></i> How we work
-          </button>
+      <!-- Our Latest Portfolio Cards -->
+      <div class="mt-6">
 
-          <h2
-            class="text-4xl font-black text-head-color mt-4 text-center"
-            style="-webkit-text-stroke: 1px #212121"
-          >
-            Our Works Process
-          </h2>
+        <!-- Line Mobile Only 1-->
+        <div class="bg-white rounded-2xl p-5 flex flex-col mb-5 md:hidden">
+          <!-- img -->
+          <div class="h-[250px] w-full rounded-2xl bg-no-repeat bg-cover bg-center"
+            style="background-image: url('./assets/portfolio-1.png')">
+          </div>
 
-          <p class="md:w-[650px] text-pera-color text-center mt-6">
-            We ensure our every project is seamlessly executed, from concept to
-            completion, with a focus on quality and attention to detail.
-          </p>
+          <div>
+            <h3 class="mt-2 w-full text-xl font-extrabold text-pera-color">
+              Designing
+            </h3>
+
+            <p class="mt-2 w-full h-[72px] overflow-hidden text-ellipsis font-medium text-pera-foot-color">
+              An elegant house exudes sophistication through classic design
+              vh jkjgs jjkagck jhjhc jhj hcajh elements and refined det
+              Lorem ipsum dolor sit amet. Comm house exudes sophistication
+              through classic ipsum dolor sit amet. Comm house exudes
+              sophistication through classic ipsum dolor sit amet. Comm
+              house exudes sophistication through classic ipsum dolor sit
+              amet. Comm house exudes sophistication through classic ipsum
+              dolor sit amet. Comm house exudes sophistication through
+              classic
+            </p>
+
+            <button class="flex items-center gap-2 mt-3 text-head-color">
+              <span class="text-lg font-bold">Read More</span>
+              <i
+                class="fa-solid fa-arrow-right -rotate-45 w-8 h-8 rounded-[100%] bg-pri-color flex justify-center items-center"></i>
+            </button>
+          </div>
         </div>
+        <!-- Mobile Only end -->
 
-        <!-- Our Works Process Cards -->
-        <div class="mt-8 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
+
+
+        <!-- Line - 1 -->
+        <div class="hidden md:flex gap-6">
           <!-- Card-1 -->
-          <div class="bg-[#E7C1D3] rounded-2xl p-6">
-            <img src="./assets/icon-concept.png" alt="" />
-            <h3 class="font-extrabold text-xl mt-3">Concept</h3>
-            <p class="font-medium w-full mt-3 text-pera-color">
-              We understand your vision, and set foundation for a space that
-              aligns with your goals.
-            </p>
-          </div>
-
-          <!-- Card-2 -->
-          <div class="bg-[#EFDA6E] rounded-2xl p-6">
-            <img src="./assets/icon-design-process.png" alt="" />
-            <h3 class="font-extrabold text-xl mt-3">Design Process</h3>
-            <p class="font-medium w-full mt-3 text-pera-color">
-              Our team crafts thoughtful designs that is creative and
-              functional, tailored to your needs.
-            </p>
-          </div>
-
-          <!-- Card-3 -->
-          <div class="bg-[#A4DAC3] rounded-2xl p-6">
-            <img src="./assets/icon-supervision.png" alt="" />
-            <h3 class="font-extrabold text-xl mt-3">Supervision</h3>
-            <p class="font-medium w-full mt-3 text-pera-color">
-              We supervise during construction, ensuring the project maintains
-              the design and quality.
-            </p>
-          </div>
-
-          <!-- Card-4 -->
-          <div class="bg-[#77AAEA] rounded-2xl p-6">
-            <img src="./assets/icon-budget-planning.png" alt="" />
-            <h3 class="font-extrabold text-xl mt-3">Budget Planning</h3>
-            <p class="font-medium w-full mt-3 text-pera-color">
-              We provide efficient budget management, ensuring your project
-              financially on track.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Our Latest Portfolio -->
-      <div class="container mx-auto px-5 py-12 md:py-20">
-        <!-- Our Latest Portfolio Header -->
-        <div class="flex flex-col items-center">
-          <button
-            class="bg-btn-green px-4 py-2 rounded-3xl text-pera-color font-bold"
-          >
-            <i class="fa-solid fa-arrow-right mr-1"></i> Explore our Latest
-            works
-          </button>
-
-          <h2
-            class="text-4xl font-black text-head-color mt-4 text-center"
-            style="-webkit-text-stroke: 1px #212121"
-          >
-            Our Latest Portfolio
-          </h2>
-
-          <p class="md:w-[650px] text-pera-color text-center mt-6">
-            Discover our most recent projects, Each portfolio piece reflects our
-            commitment to creating exceptional spaces tailored to our clients'
-            needs.
-          </p>
-        </div>
-
-        <!-- Our Latest Portfolio Cards -->
-        <div class="mt-6">
-          <!-- Card-1 -->
-          <div
-            class="bg-white rounded-2xl p-5 h-[450px] sm:w-[100%] lg:h-[500px] flex flex-row sm:flex-col lg:flex-row gap-5"
-          >
+          <div class="bg-white rounded-2xl p-5 flex flex-col md:flex-row  gap-5">
             <!-- img -->
-            <div
-              class="w-[100%] lg:w-[46%] h-[46%] lg:h-[100%] rounded-2xl bg-no-repeat bg-cover bg-center"
-              style="background-image: url('./assets/article-3.png')"
-            ></div>
-
-            <div class="h-[180px] bored">
-              <h3
-                class="mt-2 w-full text-xl font-extrabold text-pera-color"
-              >
+            <div class="h-[164px] w-[244px] rounded-2xl bg-no-repeat bg-cover bg-center">
+              <img class="h-[164px] w-[244px]" src="./assets/portfolio-1.png" alt="" />
+            </div>
+            <!-- content -->
+            <div class="w-[calc(100%-244px)]">
+              <h3 class="mt-2 w-full text-xl font-extrabold text-pera-color">
                 Designing
               </h3>
 
-              <p
-                class="mt-2 w-full h-[72px] overflow-hidden text-ellipsis font-medium text-pera-foot-color"
-              >
-                An elegant house exudes sophistication through classic design vh jkjgs jjkagck  jhjhc jhj hcajh 
-                elements and refined det Lorem ipsum dolor sit amet . Comm
-              </p>
-
-              <button class="flex items-center gap-2 mt-3 text-head-color">
-                <span class="text-lg font-bold">Read More</span>
-                <i
-                  class="fa-solid fa-arrow-right -rotate-45 w-8 h-8 rounded-[100%] bg-pri-color flex justify-center items-center"
-                ></i>
-              </button>
-            </div>
-          </div>
-
-          <!-- end -->
-        </div>
-      </div>
-
-      <!-- Articles and News -->
-      <div class="container mx-auto px-5 py-12 md:py-20">
-        <!-- Articles and News Header -->
-        <div class="flex flex-col items-center">
-          <button
-            class="bg-btn-green px-4 py-2 rounded-3xl text-pera-color font-bold"
-          >
-            <i class="fa-solid fa-arrow-right mr-1"></i> Rinterio News
-          </button>
-
-          <h2
-            class="text-4xl font-black text-head-color mt-4 text-center"
-            style="-webkit-text-stroke: 1px #212121"
-          >
-            Read Our Articles and News
-          </h2>
-
-          <p class="md:w-[650px] text-pera-color text-center mt-6">
-            Stay updated with our latest insights and updates. Explore articles
-            on design trends, project highlights, and industry news to keep
-            informed and inspired.
-          </p>
-        </div>
-
-        <!-- Articles and News Cards -->
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-8">
-          <!-- Card-1 -->
-          <div
-            class="bg-white rounded-2xl p-5 h-[450px] sm:h-[100%] lg:h-[500px] flex flex-col sm:flex-row lg:flex-col gap-5"
-          >
-            <!-- img -->
-            <div
-              class="w-[100%] sm:w-[45%] lg:w-[100%] h-[46%] sm:h-[100%] lg:h-[clac(100%-200)] rounded-2xl bg-no-repeat bg-cover bg-center"
-              style="background-image: url('./assets/article-3.png')"
-            ></div>
-
-            <div class="h-[200px]">
-              <div class="flex gap-4 text-pera-foot-color text-sm">
-                <p>
-                  <i class="fa-regular fa-calendar mr-1 text-lg"></i> August 24,
-                  2024
-                </p>
-                <p>
-                  <i class="fa-regular fa-circle-user mr-1 text-lg"></i> By
-                  Admin
-                </p>
-              </div>
-              <h3
-                class="mt-2 w-full h-[56px] overflow-hidden text-ellipsis text-xl font-extrabold text-pera-color"
-              >
-                Designing an Elegant Home: Key Elements to Consider.
-              </h3>
-
-              <p
-                class="mt-2 w-full h-[48px] overflow-hidden text-ellipsis font-medium text-pera-foot-color"
-              >
+              <p class="mt-2 w-full h-[72px] overflow-hidden text-ellipsis font-medium text-pera-foot-color">
                 An elegant house exudes sophistication through classic design
-                elements and refined details, creating a timeless atmosphere.
+                vh jkjgs jjkagck jhjhc jhj hcajh elements and refined det
+                Lorem ipsum dolor sit amet . Comm house exudes sophistication
+                through classic ipsum dolor sit amet . Comm house exudes
+                sophistication through classic ipsum dolor sit amet . Comm
+                house exudes sophistication through classic ipsum dolor sit
+                amet . Comm house exudes sophistication through classic ipsum
+                dolor sit amet . Comm house exudes sophistication through
+                classic
               </p>
 
               <button class="flex items-center gap-2 mt-3 text-head-color">
                 <span class="text-lg font-bold">Read More</span>
                 <i
-                  class="fa-solid fa-arrow-right -rotate-45 w-8 h-8 rounded-[100%] bg-pri-color flex justify-center items-center"
-                ></i>
+                  class="fa-solid fa-arrow-right -rotate-45 w-8 h-8 rounded-[100%] bg-pri-color flex justify-center items-center"></i>
               </button>
             </div>
           </div>
 
           <!-- Card-2 -->
-          <div
-            class="bg-white rounded-2xl p-5 h-[450px] sm:h-[100%] lg:h-[500px] flex flex-col sm:flex-row lg:flex-col gap-5"
-          >
-            <!-- img -->
-            <div
-              class="w-[100%] sm:w-[45%] lg:w-[100%] h-[46%] sm:h-[100%] lg:h-[clac(100%-200)] rounded-2xl bg-no-repeat bg-cover bg-center"
-              style="background-image: url('./assets/article-2.png')"
-            ></div>
-
-            <div class="h-[200px]">
-              <div class="flex gap-4 text-pera-foot-color text-sm">
-                <p>
-                  <i class="fa-regular fa-calendar mr-1 text-lg"></i> August 18,
-                  2024
-                </p>
-                <p>
-                  <i class="fa-regular fa-circle-user mr-1 text-lg"></i> By
-                  Nayeem
-                </p>
-              </div>
-              <h3
-                class="mt-2 w-full h-[56px] overflow-hidden text-ellipsis text-xl font-extrabold text-pera-color"
-              >
-                Creating a Modern House: Trends and Tips.
-              </h3>
-
-              <p
-                class="mt-2 w-full h-[48px] overflow-hidden text-ellipsis font-medium text-pera-foot-color"
-              >
-                A modern house embraces simplicity and functionality with clean
-                lines and contemporary design, reflecting a minimalist
-                lifestyle.
-              </p>
-
-              <button class="flex items-center gap-2 mt-3 text-head-color">
-                <span class="text-lg font-bold">Read More</span>
-                <i
-                  class="fa-solid fa-arrow-right -rotate-45 w-8 h-8 rounded-[100%] bg-pri-color flex justify-center items-center"
-                ></i>
-              </button>
+          <div class="bg-white rounded-2xl p-5 hidden gap-5 xl:flex">
+            <div class="h-[164px] w-[310px] rounded-2xl bg-no-repeat bg-cover bg-center">
+              <img class="h-[164px] w-[310px]" src="./assets/portfolio-2.png" alt="" />
             </div>
           </div>
-
-          <!-- Card-3 -->
-          <div
-            class="bg-white rounded-2xl p-5 h-[450px] sm:h-[100%] lg:h-[500px] flex flex-col sm:flex-row lg:flex-col gap-5"
-          >
-            <!-- img -->
-            <div
-              class="w-[100%] sm:w-[45%] lg:w-[100%] h-[46%] sm:h-[100%] lg:h-[clac(100%-200)] rounded-2xl bg-no-repeat bg-cover bg-center"
-              style="background-image: url('./assets/article-1.png')"
-            ></div>
-
-            <div class="h-[200px]">
-              <div class="flex gap-4 text-pera-foot-color text-sm">
-                <p>
-                  <i class="fa-regular fa-calendar mr-1 text-lg"></i> July 14,
-                  2024
-                </p>
-                <p>
-                  <i class="fa-regular fa-circle-user mr-1 text-lg"></i> By
-                  Admin
-                </p>
-              </div>
-              <h3
-                class="mt-2 w-full h-[56px] overflow-hidden text-ellipsis text-xl font-extrabold text-pera-color"
-              >
-                Essential Features of a Luxury Villa: What to Include.
-              </h3>
-
-              <p
-                class="mt-2 w-full h-[48px] overflow-hidden text-ellipsis font-medium text-pera-foot-color"
-              >
-                A luxury villa offers unparalleled opulence with high-end
-                finishes, spacious interiors, and premium amenities for an
-                extravagant living experience.
-              </p>
-
-              <button class="flex items-center gap-2 mt-3 text-head-color">
-                <span class="text-lg font-bold">Read More</span>
-                <i
-                  class="fa-solid fa-arrow-right -rotate-45 w-8 h-8 rounded-[100%] bg-pri-color flex justify-center items-center"
-                ></i>
-              </button>
-            </div>
-          </div>
-          <!-- End -->
         </div>
-      </div>
-    </main>
 
-    <footer>
-      <!-- Footer-1 -->
-      <div
-        class="bg-center bg-cover bg-no-repeat px-5 py-12 md:py-20 xl:py-28 border-4 md:border-8 border-white"
-        style="background-image: url(./assets/footer-bg.jpg)"
-      >
-        <div class="container mx-auto">
-          <!-- Discuss Header -->
-          <div class="flex flex-col items-center">
-            <button
-              class="bg-btn-green px-4 py-2 rounded-3xl text-pera-color font-bold"
-            >
-              <i class="fa-solid fa-arrow-right mr-1"></i> Let’s Connect
-            </button>
+        <!-- Line 2 Mobile Tab -->
+        <div class="md:flex gap-6 mt-6 xl:hidden">
 
-            <h2
-              class="text-4xl font-black text-head-color mt-4 text-center"
-              style="-webkit-text-stroke: 1px #212121"
-            >
-              Let’s Discuss Next Project
-            </h2>
+          <!-- Card-2.2 mobile -->
+          <div class="bg-white rounded-2xl p-5 flex gap-5 md:w-1/2">
+            <div class="h-[250px] md:h-[164px] w-full rounded-2xl bg-no-repeat bg-cover bg-center"
+              style="background-image: url('./assets/portfolio-2.png');">
+              <!-- img -->
+            </div>
+          </div>
 
-            <p class="md:w-[650px] text-pera-color text-center mt-6">
-              Ready to bring your vision to life? Connect with us to explore
-              ideas, share your goals, and start planning your next design
-              project. We’re excited to collaborate with you!.
+          <!-- Card-2.2 mobile -->
+          <div class="bg-white rounded-2xl p-5 flex gap-5 md:w-1/2 mt-5 md:mt-0">
+            <div class="h-[250px] md:h-[164px] w-full rounded-2xl bg-no-repeat bg-cover bg-center"
+              style="background-image: url('./assets/portfolio-4.png');">
+              <!-- img -->
+            </div>
+          </div>
+
+        </div>
+
+
+
+        <!-- Line Mobile Only 2-->
+        <div class="bg-white rounded-2xl p-5 flex flex-col mt-5 md:hidden">
+          <!-- img -->
+          <div class="h-[250px] w-full rounded-2xl bg-no-repeat bg-cover bg-center"
+            style="background-image: url('./assets/portfolio-5.png')">
+          </div>
+
+          <div>
+            <h3 class="mt-2 w-full text-xl font-extrabold text-pera-color">
+              Concept
+            </h3>
+
+            <p class="mt-2 w-full h-[72px] overflow-hidden text-ellipsis font-medium text-pera-foot-color">
+              An elegant house exudes sophistication through classic design
+              vh jkjgs jjkagck jhjhc jhj hcajh elements and refined det
+              Lorem ipsum dolor sit amet. Comm house exudes sophistication
+              through classic ipsum dolor sit amet. Comm house exudes
+              sophistication through classic ipsum dolor sit amet. Comm
+              house exudes sophistication through classic ipsum dolor sit
+              amet. Comm house exudes sophistication through classic ipsum
+              dolor sit amet. Comm house exudes sophistication through
+              classic
             </p>
+
+            <button class="flex items-center gap-2 mt-3 text-head-color">
+              <span class="text-lg font-bold">Read More</span>
+              <i
+                class="fa-solid fa-arrow-right -rotate-45 w-8 h-8 rounded-[100%] bg-pri-color flex justify-center items-center"></i>
+            </button>
+          </div>
+        </div>
+        <!-- Mobile Only end -->
+
+
+
+
+
+
+        <!-- Line - 3 -->
+        <div class="hidden md:flex gap-6 mt-6">
+
+          <!-- Card-3.1 -->
+          <div class="bg-white rounded-2xl p-5 gap-5 hidden xl:block">
+            <div class="h-[164px] w-[261px] rounded-2xl bg-no-repeat bg-cover bg-center">
+              <img class="h-[164px] w-[261px]" src="./assets/portfolio-3.png" alt="" />
+            </div>
           </div>
 
-          <!-- Discuss Input -->
-          <div class="mt-8 flex flex-col gap-6">
-            <div class="flex flex-col md:flex-row gap-6">
-              <input
-                type="text"
-                placeholder="First Name*"
-                class="input w-full h-16 rounded-[64px] p-5"
-              />
-              <input
-                type="text"
-                placeholder="Last Name*"
-                class="input w-full h-16 rounded-[64px] p-5"
-              />
+          <!-- Card-3.2 -->
+          <div class="bg-white rounded-2xl p-5 flex gap-5">
+            <!-- img -->
+            <div class="h-[164px] w-[245px] rounded-2xl bg-no-repeat bg-cover bg-center">
+              <img class="h-[164px] w-[245px]" src="./assets/portfolio-4.png" alt="" />
             </div>
+            <!-- content -->
+            <div class="w-[calc(100%-245px)]">
+              <h3 class="mt-2 w-full text-xl font-extrabold text-pera-color">
+                Designing
+              </h3>
 
-            <div class="flex flex-col md:flex-row gap-6">
-              <input
-                type="number"
-                placeholder="Phone Number*"
-                class="input w-full h-16 rounded-[64px] p-5"
-              />
-              <input
-                type="email"
-                placeholder="Email Address*"
-                class="input w-full h-16 rounded-[64px] p-5"
-              />
-            </div>
+              <p class="mt-2 w-full h-[72px] overflow-hidden text-ellipsis font-medium text-pera-foot-color">
+                An elegant house exudes sophistication through classic design
+                vh jkjgs jjkagck jhjhc jhj hcajh elements and refined det
+                Lorem ipsum dolor sit amet . Comm house exudes sophistication
+                through classic ipsum dolor sit amet . Comm house exudes
+                sophistication through classic ipsum dolor sit amet . Comm
+                house exudes sophistication through classic ipsum dolor sit
+                amet . Comm house exudes sophistication through classic ipsum
+                dolor sit amet . Comm house exudes sophistication through
+                classic
+              </p>
 
-            <div>
-              <textarea
-                class="textarea w-full rounded-[32px] h-40 xl:h-60 p-5"
-                placeholder="Write your message here"
-              ></textarea>
-            </div>
-
-            <div>
-              <button
-                class="mt-2 justify-center py-3 w-full rounded-[32px] bg-pri-color flex content-center items-center gap-2"
-              >
-                <span class="font-extrabold text-2xl">Send Mail</span>
+              <button class="flex items-center gap-2 mt-3 text-head-color">
+                <span class="text-lg font-bold">Read More</span>
                 <i
-                  class="-rotate-45 w-9 h-9 rounded-[100%] bg-head-color fa-solid fa-arrow-right text-white flex justify-center items-center"
-                ></i>
+                  class="fa-solid fa-arrow-right -rotate-45 w-8 h-8 rounded-[100%] bg-pri-color flex justify-center items-center"></i>
               </button>
             </div>
           </div>
+
+          <!-- Card-3.3 -->
+          <div class="bg-white rounded-2xl p-5 hidden gap-5 lg:block">
+            <div class="h-[164px] w-[261px] rounded-2xl bg-no-repeat bg-cover bg-center">
+              <img class="h-[164px] w-[261px]" src="./assets/portfolio-5.png" alt="" />
+            </div>
+          </div>
+
         </div>
+
+        <!-- Line 4 Mobile Tab -->
+        <div class="md:flex gap-6 mt-6 xl:hidden">
+
+          <!-- Card-4.1 mobile -->
+          <div class="bg-white rounded-2xl p-5 flex gap-5 md:w-1/2">
+            <div class="h-[250px] md:h-[164px] w-full rounded-2xl bg-no-repeat bg-cover bg-center"
+              style="background-image: url('./assets/portfolio-2.png');">
+              <!-- img -->
+            </div>
+          </div>
+
+          <!-- Card-4.2 mobile -->
+          <div class="bg-white rounded-2xl p-5 flex gap-5 md:w-1/2 mt-5 md:mt-0">
+            <div class="bored h-[250px] md:h-[164px] w-full rounded-2xl bg-no-repeat bg-cover bg-center"
+              style="background-image: url('./assets/portfolio-4.png');">
+              <!-- img -->
+            </div>
+          </div>
+
+        </div>
+
+        <!-- end -->
+      </div>
+    </div>
+    </div>
+
+    <!-- Articles and News -->
+    <div class="container mx-auto px-5 py-12 md:py-20">
+      <!-- Articles and News Header -->
+      <div class="flex flex-col items-center">
+        <button class="bg-btn-green px-4 py-2 rounded-3xl text-pera-color font-bold">
+          <i class="fa-solid fa-arrow-right mr-1"></i> Rinterio News
+        </button>
+
+        <h2 class="text-4xl font-black text-head-color mt-4 text-center" style="-webkit-text-stroke: 1px #212121">
+          Read Our Articles and News
+        </h2>
+
+        <p class="md:w-[650px] text-pera-color text-center mt-6">
+          Stay updated with our latest insights and updates. Explore articles
+          on design trends, project highlights, and industry news to keep
+          informed and inspired.
+        </p>
       </div>
 
-      <!-- Footer-2 -->
-      <div class="bg-sec-color px-5 py-12 md:py-20 xl:py-28">
-        <div class="container mx-auto flex flex-col items-center">
-          <div class="flex gap-2">
-            <i
-              class="-rotate-45 w-9 h-9 rounded-[100%] bg-pri-color font-bold fa-solid fa-arrow-right text-sec-color flex justify-center items-center"
-            ></i>
-            <span class="font-extrabold text-white text-4xl">Rinterio</span>
+      <!-- Articles and News Cards -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-8">
+        <!-- Card-1 -->
+        <div
+          class="bg-white rounded-2xl p-5 h-[450px] sm:h-[100%] lg:h-[500px] flex flex-col sm:flex-row lg:flex-col gap-5">
+          <!-- img -->
+          <div
+            class="w-[100%] sm:w-[45%] lg:w-[100%] h-[46%] sm:h-[100%] lg:h-[clac(100%-200)] rounded-2xl bg-no-repeat bg-cover bg-center"
+            style="background-image: url('./assets/article-3.png')"></div>
+
+          <div class="h-[200px]">
+            <div class="flex gap-4 text-pera-foot-color text-sm">
+              <p>
+                <i class="fa-regular fa-calendar mr-1 text-lg"></i> August 24,
+                2024
+              </p>
+              <p>
+                <i class="fa-regular fa-circle-user mr-1 text-lg"></i> By
+                Admin
+              </p>
+            </div>
+            <h3 class="mt-2 w-full h-[56px] overflow-hidden text-ellipsis text-xl font-extrabold text-pera-color">
+              Designing an Elegant Home: Key Elements to Consider.
+            </h3>
+
+            <p class="mt-2 w-full h-[48px] overflow-hidden text-ellipsis font-medium text-pera-foot-color">
+              An elegant house exudes sophistication through classic design
+              elements and refined details, creating a timeless atmosphere.
+            </p>
+
+            <button class="flex items-center gap-2 mt-3 text-head-color">
+              <span class="text-lg font-bold">Read More</span>
+              <i
+                class="fa-solid fa-arrow-right -rotate-45 w-8 h-8 rounded-[100%] bg-pri-color flex justify-center items-center"></i>
+            </button>
           </div>
-          <p class="md:w-[650px] text-pera-foot-color text-center mt-4">
-            Connect with us to start a new project and see how we can transform
-            your space. Follow us for the latest updates and design inspiration.
-          </p>
-          <nav class="mt-12">
-            <ul
-              class="flex flex-col md:flex-row text-link-foot-color font-medium gap-4 md:gap-24 text-center"
-            >
-              <li><a href=""></a>Home</li>
-              <li><a href=""></a>Service</li>
-              <li><a href=""></a>Portfolio</li>
-              <li><a href=""></a>Blogs</li>
-              <li><a href=""></a>Contact Us</li>
-            </ul>
-          </nav>
-          <button
-            class="mt-12 justify-center py-3 px-5 rounded-[32px] bg-pri-color flex content-center items-center gap-2"
-          >
-            <span class="font-extrabold text-2xl">Book Consult</span>
-            <i
-              class="-rotate-45 w-9 h-9 rounded-[100%] bg-head-color fa-solid fa-arrow-right text-white flex justify-center items-center"
-            ></i>
+        </div>
+
+        <!-- Card-2 -->
+        <div
+          class="bg-white rounded-2xl p-5 h-[450px] sm:h-[100%] lg:h-[500px] flex flex-col sm:flex-row lg:flex-col gap-5">
+          <!-- img -->
+          <div
+            class="w-[100%] sm:w-[45%] lg:w-[100%] h-[46%] sm:h-[100%] lg:h-[clac(100%-200)] rounded-2xl bg-no-repeat bg-cover bg-center"
+            style="background-image: url('./assets/article-2.png')"></div>
+
+          <div class="h-[200px]">
+            <div class="flex gap-4 text-pera-foot-color text-sm">
+              <p>
+                <i class="fa-regular fa-calendar mr-1 text-lg"></i> August 18,
+                2024
+              </p>
+              <p>
+                <i class="fa-regular fa-circle-user mr-1 text-lg"></i> By
+                Nayeem
+              </p>
+            </div>
+            <h3 class="mt-2 w-full h-[56px] overflow-hidden text-ellipsis text-xl font-extrabold text-pera-color">
+              Creating a Modern House: Trends and Tips.
+            </h3>
+
+            <p class="mt-2 w-full h-[48px] overflow-hidden text-ellipsis font-medium text-pera-foot-color">
+              A modern house embraces simplicity and functionality with clean
+              lines and contemporary design, reflecting a minimalist
+              lifestyle.
+            </p>
+
+            <button class="flex items-center gap-2 mt-3 text-head-color">
+              <span class="text-lg font-bold">Read More</span>
+              <i
+                class="fa-solid fa-arrow-right -rotate-45 w-8 h-8 rounded-[100%] bg-pri-color flex justify-center items-center"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Card-3 -->
+        <div
+          class="bg-white rounded-2xl p-5 h-[450px] sm:h-[100%] lg:h-[500px] flex flex-col sm:flex-row lg:flex-col gap-5">
+          <!-- img -->
+          <div
+            class="w-[100%] sm:w-[45%] lg:w-[100%] h-[46%] sm:h-[100%] lg:h-[clac(100%-200)] rounded-2xl bg-no-repeat bg-cover bg-center"
+            style="background-image: url('./assets/article-1.png')"></div>
+
+          <div class="h-[200px]">
+            <div class="flex gap-4 text-pera-foot-color text-sm">
+              <p>
+                <i class="fa-regular fa-calendar mr-1 text-lg"></i> July 14,
+                2024
+              </p>
+              <p>
+                <i class="fa-regular fa-circle-user mr-1 text-lg"></i> By
+                Admin
+              </p>
+            </div>
+            <h3 class="mt-2 w-full h-[56px] overflow-hidden text-ellipsis text-xl font-extrabold text-pera-color">
+              Essential Features of a Luxury Villa: What to Include.
+            </h3>
+
+            <p class="mt-2 w-full h-[48px] overflow-hidden text-ellipsis font-medium text-pera-foot-color">
+              A luxury villa offers unparalleled opulence with high-end
+              finishes, spacious interiors, and premium amenities for an
+              extravagant living experience.
+            </p>
+
+            <button class="flex items-center gap-2 mt-3 text-head-color">
+              <span class="text-lg font-bold">Read More</span>
+              <i
+                class="fa-solid fa-arrow-right -rotate-45 w-8 h-8 rounded-[100%] bg-pri-color flex justify-center items-center"></i>
+            </button>
+          </div>
+        </div>
+        <!-- End -->
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <!-- Footer-1 -->
+    <div class="bg-center bg-cover bg-no-repeat px-5 py-12 md:py-20 xl:py-28 border-4 md:border-8 border-white"
+      style="background-image: url(./assets/footer-bg.jpg)">
+      <div class="container mx-auto">
+        <!-- Discuss Header -->
+        <div class="flex flex-col items-center">
+          <button class="bg-btn-green px-4 py-2 rounded-3xl text-pera-color font-bold">
+            <i class="fa-solid fa-arrow-right mr-1"></i> Let’s Connect
           </button>
+
+          <h2 class="text-4xl font-black text-head-color mt-4 text-center" style="-webkit-text-stroke: 1px #212121">
+            Let’s Discuss Next Project
+          </h2>
+
+          <p class="md:w-[650px] text-pera-color text-center mt-6">
+            Ready to bring your vision to life? Connect with us to explore
+            ideas, share your goals, and start planning your next design
+            project. We’re excited to collaborate with you!.
+          </p>
+        </div>
+
+        <!-- Discuss Input -->
+        <div class="mt-8 flex flex-col gap-6">
+          <div class="flex flex-col md:flex-row gap-6">
+            <input type="text" placeholder="First Name*" class="input w-full h-16 rounded-[64px] p-5" />
+            <input type="text" placeholder="Last Name*" class="input w-full h-16 rounded-[64px] p-5" />
+          </div>
+
+          <div class="flex flex-col md:flex-row gap-6">
+            <input type="number" placeholder="Phone Number*" class="input w-full h-16 rounded-[64px] p-5" />
+            <input type="email" placeholder="Email Address*" class="input w-full h-16 rounded-[64px] p-5" />
+          </div>
+
+          <div>
+            <textarea class="textarea w-full rounded-[32px] h-40 xl:h-60 p-5"
+              placeholder="Write your message here"></textarea>
+          </div>
+
+          <div>
+            <button
+              class="mt-2 justify-center py-3 w-full rounded-[32px] bg-pri-color flex content-center items-center gap-2">
+              <span class="font-extrabold text-2xl">Send Mail</span>
+              <i
+                class="-rotate-45 w-9 h-9 rounded-[100%] bg-head-color fa-solid fa-arrow-right text-white flex justify-center items-center"></i>
+            </button>
+          </div>
         </div>
       </div>
-    </footer>
-  </body>
+    </div>
+
+    <!-- Footer-2 -->
+    <div class="bg-sec-color px-5 py-12 md:py-20 xl:py-28">
+      <div class="container mx-auto flex flex-col items-center">
+        <div class="flex gap-2">
+          <i
+            class="-rotate-45 w-9 h-9 rounded-[100%] bg-pri-color font-bold fa-solid fa-arrow-right text-sec-color flex justify-center items-center"></i>
+          <span class="font-extrabold text-white text-4xl">Rinterio</span>
+        </div>
+        <p class="md:w-[650px] text-pera-foot-color text-center mt-4">
+          Connect with us to start a new project and see how we can transform
+          your space. Follow us for the latest updates and design inspiration.
+        </p>
+        <nav class="mt-12">
+          <ul class="flex flex-col md:flex-row text-link-foot-color font-medium gap-4 md:gap-24 text-center">
+            <li><a href=""></a>Home</li>
+            <li><a href=""></a>Service</li>
+            <li><a href=""></a>Portfolio</li>
+            <li><a href=""></a>Blogs</li>
+            <li><a href=""></a>Contact Us</li>
+          </ul>
+        </nav>
+        <button
+          class="mt-12 justify-center py-3 px-5 rounded-[32px] bg-pri-color flex content-center items-center gap-2">
+          <span class="font-extrabold text-2xl">Book Consult</span>
+          <i
+            class="-rotate-45 w-9 h-9 rounded-[100%] bg-head-color fa-solid fa-arrow-right text-white flex justify-center items-center"></i>
+        </button>
+      </div>
+    </div>
+  </footer>
+</body>
+
 </html>
